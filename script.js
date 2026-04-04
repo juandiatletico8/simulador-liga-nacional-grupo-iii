@@ -287,6 +287,56 @@ const escudos = {
 { jornada: 25, local: "Numancia", visitante: "Victoria", gLocal: 4, gVis: 0 },
 { jornada: 25, local: "CIA", visitante: "Burgos B", gLocal: 3, gVis: 2 },
 
+// Jornada 26
+{ jornada: 26, local: "San Agustín", visitante: "Gª Segoviana", gLocal: null, gVis: null },
+{ jornada: 26, local: "Victoria", visitante: "CIA", gLocal: null, gVis: null },
+{ jornada: 26, local: "Burgos B", visitante: "Diocesanos", gLocal: null, gVis: null },
+{ jornada: 26, local: "La Virgen del Camino", visitante: "Valladolid B", gLocal: null, gVis: null },
+{ jornada: 26, local: "Puente Castro", visitante: "Vista Alegre", gLocal: null, gVis: null },
+{ jornada: 26, local: "Numancia", visitante: "CYD Leonesa", gLocal: null, gVis: null },
+{ jornada: 26, local: "Parquesol", visitante: "Salamanca UDS", gLocal: null, gVis: null },
+{ jornada: 26, local: "Santa Marta", visitante: "Sur", gLocal: null, gVis: null },
+
+// Jornada 27
+{ jornada: 27, local: "Sur", visitante: "Parquesol", gLocal: null, gVis: null },
+{ jornada: 27, local: "Salamanca UDS", visitante: "Burgos B", gLocal: null, gVis: null },
+{ jornada: 27, local: "Diocesanos", visitante: "Victoria", gLocal: null, gVis: null },
+{ jornada: 27, local: "CIA", visitante: "Numancia", gLocal: null, gVis: null },
+{ jornada: 27, local: "CYD Leonesa", visitante: "San Agustín", gLocal: null, gVis: null },
+{ jornada: 27, local: "Vista Alegre", visitante: "Santa Marta", gLocal: null, gVis: null },
+{ jornada: 27, local: "Valladolid B", visitante: "Puente Castro", gLocal: null, gVis: null },
+{ jornada: 27, local: "Gª Segoviana", visitante: "La Virgen del Camino", gLocal: null, gVis: null },
+
+// Jornada 28
+{ jornada: 28, local: "La Virgen del Camino", visitante: "San Agustín", gLocal: null, gVis: null },
+{ jornada: 28, local: "Puente Castro", visitante: "Gª Segoviana", gLocal: null, gVis: null },
+{ jornada: 28, local: "Santa Marta", visitante: "Valladolid B", gLocal: null, gVis: null },
+{ jornada: 28, local: "Parquesol", visitante: "Vista Alegre", gLocal: null, gVis: null },
+{ jornada: 28, local: "Burgos B", visitante: "Sur", gLocal: null, gVis: null },
+{ jornada: 28, local: "Victoria", visitante: "Salamanca UDS", gLocal: null, gVis: null },
+{ jornada: 28, local: "Numancia", visitante: "Diocesanos", gLocal: null, gVis: null },
+{ jornada: 28, local: "CIA", visitante: "CYD Leonesa", gLocal: null, gVis: null },
+
+// Jornada 29
+{ jornada: 29, local: "Sur", visitante: "Victoria", gLocal: null, gVis: null },
+{ jornada: 29, local: "Salamanca UDS", visitante: "Numancia", gLocal: null, gVis: null },
+{ jornada: 29, local: "Valladolid B", visitante: "Parquesol", gLocal: null, gVis: null },
+{ jornada: 29, local: "San Agustín", visitante: "Puente Castro", gLocal: null, gVis: null },
+{ jornada: 29, local: "Gª Segoviana", visitante: "Santa Marta", gLocal: null, gVis: null },
+{ jornada: 29, local: "Vista Alegre", visitante: "Burgos B", gLocal: null, gVis: null },
+{ jornada: 29, local: "La Virgen del Camino", visitante: "CYD Leonesa", gLocal: null, gVis: null },
+{ jornada: 29, local: "Diocesanos", visitante: "CIA", gLocal: null, gVis: null },
+
+// Jornada 30
+{ jornada: 30, local: "Victoria", visitante: "Vista Alegre", gLocal: null, gVis: null },
+{ jornada: 30, local: "Puente Castro", visitante: "La Virgen del Camino", gLocal: null, gVis: null },
+{ jornada: 30, local: "Santa Marta", visitante: "San Agustín", gLocal: null, gVis: null },
+{ jornada: 30, local: "Numancia", visitante: "Sur", gLocal: null, gVis: null },
+{ jornada: 30, local: "CYD Leonesa", visitante: "Diocesanos", gLocal: null, gVis: null },
+{ jornada: 30, local: "CIA", visitante: "Salamanca UDS", gLocal: null, gVis: null },
+{ jornada: 30, local: "Burgos B", visitante: "Valladolid B", gLocal: null, gVis: null },
+{ jornada: 30, local: "Parquesol", visitante: "Gª Segoviana", gLocal: null, gVis: null },
+
 ];
 
 let jornadasDisponibles = [];
