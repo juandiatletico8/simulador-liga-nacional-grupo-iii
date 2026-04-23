@@ -312,7 +312,7 @@ const escudos = {
 { jornada: 28, local: "Puente Castro", visitante: "Gª Segoviana", gLocal: null, gVis: null },
 { jornada: 28, local: "Santa Marta", visitante: "Valladolid B", gLocal: null, gVis: null },
 { jornada: 28, local: "Parquesol", visitante: "Vista Alegre", gLocal: null, gVis: null },
-{ jornada: 28, local: "Burgos B", visitante: "Sur", gLocal: null, gVis: null },
+{ jornada: 28, local: "Burgos B", visitante: "Sur", gLocal: 0, gVis: 0 },
 { jornada: 28, local: "Victoria", visitante: "Salamanca UDS", gLocal: null, gVis: null },
 { jornada: 28, local: "Numancia", visitante: "Diocesanos", gLocal: null, gVis: null },
 { jornada: 28, local: "CIA", visitante: "CYD Leonesa", gLocal: null, gVis: null },
