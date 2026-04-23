@@ -345,3 +345,20 @@ window.onload = function () {
   object-fit: contain;
 }
 
+.bloque-descarga {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.bloque-descarga p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.bloque-descarga button {
+  background: #4b0082;
+  color: white;
+  font-weight: 700;
+}

@@ -288,24 +288,24 @@ const escudos = {
 { jornada: 25, local: "CIA", visitante: "Burgos B", gLocal: 3, gVis: 2 },
 
 // Jornada 26
-{ jornada: 26, local: "San Agustín", visitante: "Gª Segoviana", gLocal: null, gVis: null },
-{ jornada: 26, local: "Victoria", visitante: "CIA", gLocal: null, gVis: null },
-{ jornada: 26, local: "Burgos B", visitante: "Diocesanos", gLocal: null, gVis: null },
-{ jornada: 26, local: "La Virgen del Camino", visitante: "Valladolid B", gLocal: null, gVis: null },
-{ jornada: 26, local: "Puente Castro", visitante: "Vista Alegre", gLocal: null, gVis: null },
-{ jornada: 26, local: "Numancia", visitante: "CYD Leonesa", gLocal: null, gVis: null },
-{ jornada: 26, local: "Parquesol", visitante: "Salamanca UDS", gLocal: null, gVis: null },
-{ jornada: 26, local: "Santa Marta", visitante: "Sur", gLocal: null, gVis: null },
+{ jornada: 26, local: "San Agustín", visitante: "Gª Segoviana", gLocal: 0, gVis: 1 },
+{ jornada: 26, local: "Victoria", visitante: "CIA", gLocal: 1, gVis: 1 },
+{ jornada: 26, local: "Burgos B", visitante: "Diocesanos", gLocal: 2, gVis: 0 },
+{ jornada: 26, local: "La Virgen del Camino", visitante: "Valladolid B", gLocal: 3, gVis: 3 },
+{ jornada: 26, local: "Puente Castro", visitante: "Vista Alegre", gLocal: 2, gVis: 0 },
+{ jornada: 26, local: "Numancia", visitante: "CYD Leonesa", gLocal: 1, gVis: 2 },
+{ jornada: 26, local: "Parquesol", visitante: "Salamanca UDS", gLocal: 1, gVis: 1 },
+{ jornada: 26, local: "Santa Marta", visitante: "Sur", gLocal: 1, gVis: 0 },
 
 // Jornada 27
-{ jornada: 27, local: "Sur", visitante: "Parquesol", gLocal: null, gVis: null },
-{ jornada: 27, local: "Salamanca UDS", visitante: "Burgos B", gLocal: null, gVis: null },
-{ jornada: 27, local: "Diocesanos", visitante: "Victoria", gLocal: null, gVis: null },
-{ jornada: 27, local: "CIA", visitante: "Numancia", gLocal: null, gVis: null },
-{ jornada: 27, local: "CYD Leonesa", visitante: "San Agustín", gLocal: null, gVis: null },
-{ jornada: 27, local: "Vista Alegre", visitante: "Santa Marta", gLocal: null, gVis: null },
-{ jornada: 27, local: "Valladolid B", visitante: "Puente Castro", gLocal: null, gVis: null },
-{ jornada: 27, local: "Gª Segoviana", visitante: "La Virgen del Camino", gLocal: null, gVis: null },
+{ jornada: 27, local: "Sur", visitante: "Parquesol", gLocal: 3, gVis: 0 },
+{ jornada: 27, local: "Salamanca UDS", visitante: "Burgos B", gLocal: 1, gVis: 0 },
+{ jornada: 27, local: "Diocesanos", visitante: "Victoria", gLocal: 3, gVis: 1 },
+{ jornada: 27, local: "CIA", visitante: "Numancia", gLocal: 1, gVis: 4 },
+{ jornada: 27, local: "CYD Leonesa", visitante: "San Agustín", gLocal: 2, gVis: 0 },
+{ jornada: 27, local: "Vista Alegre", visitante: "Santa Marta", gLocal: 1, gVis: 0 },
+{ jornada: 27, local: "Valladolid B", visitante: "Puente Castro", gLocal: 3, gVis: 1 },
+{ jornada: 27, local: "Gª Segoviana", visitante: "La Virgen del Camino", gLocal: 2, gVis: 1 },
 
 // Jornada 28
 { jornada: 28, local: "La Virgen del Camino", visitante: "San Agustín", gLocal: null, gVis: null },
@@ -764,9 +764,7 @@ function renderizarResumenFinal(clasificacion) {
   if (!contenedor) return;
 
   const ascensoDirecto = clasificacion[0];
-  const playoff = clasificacion.slice(1, 3);
-  const arrastre = clasificacion.slice(11, 13);
-  const descenso = clasificacion.slice(13, 16);
+  const descenso = clasificacion.slice(-2);
 
   function renderEquipoResumen(equipo) {
     return `
@@ -784,36 +782,41 @@ function renderizarResumenFinal(clasificacion) {
       <div class="linea-resumen">
         <span class="punto-resumen punto-verde"></span>
         <div>
-          <strong>Ascenso directo a 3ª RFEF:</strong>
+          <strong>Ascenso a División de Honor:</strong>
           ${renderEquipoResumen(ascensoDirecto)}
-        </div>
-      </div>
-
-      <div class="linea-resumen">
-        <span class="punto-resumen punto-naranja"></span>
-        <div>
-          <strong>Play-off:</strong>
-          ${playoff.map(renderEquipoResumen).join("")}
-        </div>
-      </div>
-
-      <div class="linea-resumen">
-        <span class="punto-resumen punto-morado"></span>
-        <div>
-          <strong>En peligro por arrastre:</strong>
-          ${arrastre.map(renderEquipoResumen).join("")}
         </div>
       </div>
 
       <div class="linea-resumen">
         <span class="punto-resumen punto-rojo"></span>
         <div>
-          <strong>Descenso a Provincial:</strong>
+          <strong>Descenso a Recoletas:</strong>
           ${descenso.map(renderEquipoResumen).join("")}
         </div>
       </div>
+
+      <div class="bloque-descarga">
+        <p><strong>Descarga la clasificación y envíasela a Juandi</strong></p>
+        <button type="button" onclick="descargarClasificacion()">Descargar clasificación</button>
+      </div>
     </div>
   `;
+}
+
+function descargarClasificacion() {
+  const tabla = document.getElementById("tabla-clasificacion");
+
+  if (!tabla) return;
+
+  html2canvas(tabla, {
+    backgroundColor: "#ffffff",
+    scale: 2
+  }).then(function (canvas) {
+    const enlace = document.createElement("a");
+    enlace.download = "clasificacion-final-juandi.png";
+    enlace.href = canvas.toDataURL("image/png");
+    enlace.click();
+  });
 }
 
 function animarCambiosTabla(tbody, posicionesAntes) {
@@ -855,6 +858,7 @@ function calcularClasificacion() {
   leerResultados();
 
   const clasificacion = obtenerClasificacionActual();
+
   const tbody = document.querySelector("#tabla-clasificacion tbody");
 
   const posicionesAntes = {};
@@ -870,11 +874,12 @@ function calcularClasificacion() {
     const tr = document.createElement("tr");
     tr.dataset.equipo = e.equipo;
 
-   if (i === 0) {
+    if (i === 0) {
   tr.classList.add("pos-ascenso");
-} else if (i >= clasificacion.length - 2) {
+} else if (i === clasificacion.length - 1 || i === clasificacion.length - 2) {
   tr.classList.add("pos-descenso");
 }
+
     let flecha = "";
     const posicionBase = posicionesBaseJornada[e.equipo];
     const posicionActual = i + 1;
@@ -916,6 +921,8 @@ function calcularClasificacion() {
   if (estado) {
     estado.textContent = "Clasificación actualizada. Partidos contabilizados: " + jugados;
   }
+
+  actualizarBotonesJornada();
 }
 
 function actualizarBotonesJornada() {
